@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTracker - Panel Principal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-layout">
+        <nav class="sidebar">
+            <div class="brand">
+                <span>🌱</span> EcoTracker
+            </div>
+            <div class="user-profile">
+                <p class="welcome">Bienvenido,</p>
+                <h3 id="userDisplay">Cargando...</h3>
+                <div class="score-badge">
+                    <span id="userPoints">0</span> Puntos Eco
+                </div>
+            </div>
+            <button id="btnLogout" class="btn-secondary">Cerrar Sesión</button>
+        </nav>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h2>Panel de Acciones Sustentables</h2>
+                <span class="ods-badge">ODS 13</span>
+            </header>
+
+            <div class="dashboard-grid">
+                <section class="card">
+                    <h3>Registrar Acción de Hoy</h3>
+                    <p class="subtitle">Selecciona la acción climática que realizaste:</p>
+                    
+                    <div class="habit-selector">
+                        <div class="habit-option">
+                            <input type="radio" name="habit" id="habit1" value="10" checked>
+                            <label for="habit1">🚲 Transporte sustentable (Bici/Caminar) <strong>+10 pts</strong></label>
+                        </div>
+                        <div class="habit-option">
+                            <input type="radio" name="habit" id="habit2" value="15">
+                            <label for="habit2">🛍️ Cero plásticos de un solo uso hoy <strong>+15 pts</strong></label>
+                        </div>
+                        <div class="habit-option">
+                            <input type="radio" name="habit" id="habit3" value="5">
+                            <label for="habit3">🔌 Apagar dispositivos y luces sin usar <strong>+5 pts</strong></label>
+                        </div>
+                    </div>
+                    <button id="btnLogAction">Guardar Acción</button>
+                    <p id="actionStatus" class="message"></p>
+                </section>
+
+                <section class="card">
+                    <h3>Ranking Global del Clima</h3>
+                    <p class="subtitle">Usuarios con mayor impacto positivo en la comunidad</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Posición</th>
+                                    <th>Usuario</th>
+                                    <th>Puntos</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboardBody">
+                                </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

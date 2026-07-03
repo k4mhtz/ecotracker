@@ -1,0 +1,239 @@
+:root {
+    --primary: #2d6a4f;
+    --primary-light: #40916c;
+    --dark: #1b4332;
+    --light-bg: #f4f7f6;
+    --card-bg: #ffffff;
+    --text: #2b2d42;
+    --text-muted: #6c757d;
+    --border: #e9ecef;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text);
+}
+
+/* Auth Pages */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 420px;
+}
+
+.logo-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo-section .icon {
+    font-size: 3rem;
+}
+
+.logo-section h1 {
+    color: var(--dark);
+    font-size: 1.8rem;
+}
+
+.logo-section p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: var(--primary-light);
+}
+
+.btn-flat {
+    background: transparent;
+    color: var(--primary);
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.btn-flat:hover {
+    background: transparent;
+    text-decoration: underline;
+}
+
+/* Dashboard Layout */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: var(--dark);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.user-profile {
+    margin-bottom: auto;
+}
+
+.welcome {
+    color: #b7e4c7;
+    font-size: 0.85rem;
+}
+
+.score-badge {
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background: #52b788;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.ods-badge {
+    background: #e01e37;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.habit-selector {
+    margin-bottom: 1.5rem;
+}
+
+.habit-option {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.habit-option input {
+    margin-right: 0.75rem;
+    transform: scale(1.2);
+}
+
+/* Tables */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
